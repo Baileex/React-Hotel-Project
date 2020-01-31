@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Hotel.scss";
 
 class Hotel extends Component {
   render() {

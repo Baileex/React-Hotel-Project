@@ -1,12 +1,17 @@
 import React from "react";
-import "./NavBar.scss";
-import logo from "./travel-logo.jpeg"
+// import "./NavBar.scss";
 
 
 const NavBar = () => {
-  return <nav className="navbar">
-    <img src={logo} className="logo" alt="hotel logo"></img>
-  </nav>;
+  return (
+    <nav className="navbar">
+      <img
+        src="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        className="logo"
+        alt="hotel logo"
+      ></img>
+    </nav>
+  );
 };
 
 export default NavBar;
