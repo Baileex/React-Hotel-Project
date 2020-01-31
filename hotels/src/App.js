@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.scss';
+import NavBar from './components/NavBar/NavBar';
+import HotelList from './components/HotelList/HotelList';
 
 function App() {
   return (
-  <h1>Hello from App</h1>
+  <React.Fragment>
+  <NavBar/> 
+  <HotelList/> 
+  </React.Fragment>
   );
 }
 
