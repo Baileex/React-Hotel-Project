@@ -18,7 +18,7 @@ class HotelList extends Component {
   state = {
     hotels: hotelData,
     checkedList: [],
-    sortBy: 1,
+    sortBy: 'asc',
     checkAll: false
   };
 
@@ -43,8 +43,11 @@ class HotelList extends Component {
     });
   };
 
+  sortByRating = e => {
+    
+  }
+
   onGroupChange = checkedList => {
-    console.log(checkedList)
     this.setState({
       checkedList,
       checkAll: checkedList.length === amenitiesOptions.length
