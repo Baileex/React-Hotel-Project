@@ -44,9 +44,13 @@ h3{
 h4{
  text-transform: capitalize;
  color: $mainBlack;
- margin: 0.2rem 0 0.6rem 0;
-
+ margin: 0.3rem 0 0.6rem 0;
+.rating {
+  font-size: 1.2rem;
+  display: inline-block;
 }
+} 
+
 h5 {
   text-transform: capitalize;
   ul {
@@ -61,29 +65,8 @@ h5 {
 }
 }
 
-.star-rating {
-  @extend %flex-display;
-  align-items: left;
-  font-size: 1em;
-  justify-content: left;
-  margin-bottom: 10px;
-}
 
-.back-stars {
-  @extend %flex-display;
-  color: $mainGrey;
-  position: relative;
-  text-shadow: 4px 4px 10px #843a3a;
-}
-.front-stars {
-  @extend %flex-display;
-  color: $mainYellow;
-  overflow: hidden;
-  position: absolute;
-  text-shadow: 1px 1px 1px #d29b09;
-  top: 0;
-  transition: all 0.5s;
-}
+
 
 .hotel-list{
   width: 70vw;
