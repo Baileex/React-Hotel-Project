@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hotel Component renders hotel data correctly 1`] = `ShallowWrapper {}`;
+
+exports[`renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`renders hotel data correctly 1`] = `ShallowWrapper {}`;

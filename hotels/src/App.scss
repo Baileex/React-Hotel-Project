@@ -65,11 +65,29 @@ h5 {
 }
 }
 
-
-
-
 .hotel-list{
   width: 70vw;
-  margiN: 0 auto;
+  margin: 0 auto;
   padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hotel-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.5rem;
+}
+}
+
+@media screen and (min-width: 992px) {
+  .hotel-list{
+  width: 85vw;
+  grid-template-columns: repeat(3, 1fr)
+}
+}
+
+@media screen and (min-width: 1140px) {
+  .hotel-list{
+  grid-template-columns: repeat(4, 1fr)
+}
 }
