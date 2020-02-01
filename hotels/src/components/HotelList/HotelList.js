@@ -18,7 +18,7 @@ class HotelList extends Component {
   state = {
     hotels: hotelData,
     checkedList: [],
-    sortBy: 'asc',
+    sortBy: 'default',
     checkAll: false
   };
 
@@ -29,7 +29,7 @@ class HotelList extends Component {
   };
 
   onSortChange = e => {
-    console.log("radio checked", e.target.value);
+    console.log(e.target.value);
     this.setState({
       sortBy: e.target.value
     });
@@ -43,10 +43,6 @@ class HotelList extends Component {
     });
   };
 
-  sortByRating = e => {
-    
-  }
-
   onGroupChange = checkedList => {
     this.setState({
       checkedList,
@@ -55,10 +51,21 @@ class HotelList extends Component {
   };
 
   render() {
-    const { hotels, checkedList } = this.state;
-    let filteredHotels = [...hotels]
+    const { hotels, checkedList, sortBy } = this.state;
+    let filteredHotels = [...hotels];
     if (checkedList.length > 0) {
       filteredHotels = filterHotels(hotels, checkedList);
+    }
+    if (sortBy === "asc") {
+      filteredHotels = filteredHotels.sort((a, b) => {
+        return a.starRating - b.starRating;
+      });
+    }
+
+    if (sortBy === "desc") {
+      filteredHotels = filteredHotels.sort((a, b) => {
+        return b.starRating - a.starRating;
+      });
     }
     return (
       <React.Fragment>
@@ -67,6 +74,7 @@ class HotelList extends Component {
           onGroupChange={this.onGroupChange}
           onCheck={this.onCheck}
           amenitiesOptions={amenitiesOptions}
+          sortBy={this.state.sortBy}
           checkAll={this.state.checkAll}
           checkedList={this.state.checkedList}
         />

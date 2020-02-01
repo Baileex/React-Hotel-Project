@@ -1,17 +1,25 @@
 import React from "react";
-import { Divider, Checkbox, Select, Row } from "antd";
+import { Divider, Checkbox, Radio, Row } from "antd";
 
 const HotelFilter = props => {
+  const radioStyle = {
+    display: "block",
+    height: "30px",
+    lineHeight: "30px"
+  };
   return (
-    <div className="filter-bar">
+    <div>
       <Row>
         <h2>Sort by Rating</h2>
-        <Select className="options" name="order" onChange={props.sortByRating}>
-          <Select.Option value="desc">Descending</Select.Option>
-          <Select.Option value="asc">Ascending</Select.Option>
-        </Select>
+        <Radio.Group onChange={props.onSortChange} value={props.sortBy}>
+          <Radio style={radioStyle} value="asc">
+            Ascending
+          </Radio>
+          <Radio style={radioStyle} value="desc">
+            Descending
+          </Radio>
+        </Radio.Group>
       </Row>
-      <Divider />
       <h2>Filter by</h2>
       <Row>
         <Divider orientation="right">Facilities</Divider>
