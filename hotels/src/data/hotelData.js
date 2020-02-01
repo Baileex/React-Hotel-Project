@@ -18,6 +18,6 @@ export const hotelData = [
            img:
              "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
            starRating: 3,
-           facilities: []
+           facilities: ["pet friendly"]
          }
        ];
