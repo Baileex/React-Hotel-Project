@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelFilter Component sorts hotels by rating  1`] = `ReactWrapper {}`;
+
+exports[`HotelList Component renders all hotels 1`] = `ShallowWrapper {}`;
+
+exports[`HotelList Component renders correctly 1`] = `ShallowWrapper {}`;
