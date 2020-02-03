@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "node ./node_modules/jest/bin/jest.js --watch",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

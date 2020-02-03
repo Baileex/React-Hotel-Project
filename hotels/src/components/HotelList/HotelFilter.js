@@ -21,16 +21,13 @@ const HotelFilter = props => {
         </Radio.Group>
       </Col>
       <div className="filter-col">
-      <h2>Filter by:</h2>
+        <h2>Filter by:</h2>
         <Col>
           <Checkbox.Group
             options={props.amenitiesOptions}
             value={props.checkedList}
             onChange={props.onGroupChange}
           />
-          <Checkbox onChange={props.onCheck} checked={props.checkAll}>
-            Check all
-          </Checkbox>
         </Col>
       </div>
     </div>

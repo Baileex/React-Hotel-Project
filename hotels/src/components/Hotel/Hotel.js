@@ -25,7 +25,7 @@ class Hotel extends Component {
               <StarRating rating={hotel.starRating} />
             </h4>
 
-            <h5>
+            <h4>
               Facilities :
               <span onClick={this.handleInfo}>
                 <i className="fas fa-caret-square-down"></i>
@@ -36,7 +36,7 @@ class Hotel extends Component {
                     return <li >{facility}</li>;
                   })}
               </ul>
-            </h5>
+            </h4>
           </div>
         </div>
       </article>
