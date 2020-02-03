@@ -13,8 +13,6 @@ Pre-requisites: node.js 12.13.0
 ```
 git clone https://github.com/Baileex/React-Hotel-Project.git
 
-cd hotels
-
 ```
 Install all dev dependencies, located within the package.json, with:
 
