@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Checkbox, Radio, Row } from "antd";
+import { Checkbox, Radio, Col } from "antd";
 
 const HotelFilter = props => {
   const radioStyle = {
@@ -8,8 +8,8 @@ const HotelFilter = props => {
     lineHeight: "30px"
   };
   return (
-    <div>
-      <Row>
+    <div className="filter-bar">
+      <Col>
         <h2>Sort by Rating</h2>
         <Radio.Group onChange={props.onSortChange} value={props.sortBy}>
           <Radio style={radioStyle} value="asc">
@@ -19,19 +19,20 @@ const HotelFilter = props => {
             Descending
           </Radio>
         </Radio.Group>
-      </Row>
-      <h2>Filter by</h2>
-      <Row>
-        <Divider orientation="right">Facilities</Divider>
-        <Checkbox.Group
-          options={props.amenitiesOptions}
-          value={props.checkedList}
-          onChange={props.onGroupChange}
-        />
-        <Checkbox onChange={props.onCheck} checked={props.checkAll}>
-          Check all
-        </Checkbox>
-      </Row>
+      </Col>
+      <div className="filter-col">
+      <h2>Filter by:</h2>
+        <Col>
+          <Checkbox.Group
+            options={props.amenitiesOptions}
+            value={props.checkedList}
+            onChange={props.onGroupChange}
+          />
+          <Checkbox onChange={props.onCheck} checked={props.checkAll}>
+            Check all
+          </Checkbox>
+        </Col>
+      </div>
     </div>
   );
 };
